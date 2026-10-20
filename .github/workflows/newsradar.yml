@@ -13,16 +13,17 @@ concurrency:
   group: newsradar-monitor
   cancel-in-progress: false
 
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-     - name: Check Python syntax
+      - name: Check Python syntax
         run: python3 -m py_compile monitor.py
 
-     - name: Fetch and send news
+      - name: Fetch and send news
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -37,3 +38,4 @@ jobs:
             git commit -m "Update NewsRadar state [skip ci]"
             git push
           fi
+
