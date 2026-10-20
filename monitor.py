@@ -57,8 +57,8 @@ def main():
                 seen.add(key)
                 mascot=any(word.lower() in title.lower() for word in MASCOT)
                 important=any(word.lower() in title.lower() for word in IMPORTANT)
-                if mascot or important:
-                    fresh.append((key,source['name'],title,url,'吉祥物/IP' if mascot else '国内重要新闻'))
+                if mascot or important or source['name'] in ('央视新闻', '人民日报', '中国新闻网', '新华社'):
+                   fresh.append((key,source['name'],title,url,'吉祥物/IP' if '吉祥物' in source['name'] else '新闻快讯'))
         except Exception as e:
             failures.append(source['name']+': '+str(e)[:150])
     # First run learns the existing feed items without alerting about old articles.
