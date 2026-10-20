@@ -66,9 +66,9 @@ def main():
     for source in sources:
         if not source.get('enabled',True): continue
         try:
-            data=request(source['url']); entries=items(data); fetched+=1
-           for entry in entries[:30]:
-                title=re.sub(r'\s+',' ',entry['title']).strip()
+          data=request(source['url']); entries=items(data); fetched+=1
+            for entry in entries[:30]:
+                title=re.sub(r'\s+', ' ',entry['title']).strip()
                 url=entry['url']
                 if not title or not url: continue
                 if not is_today(entry.get('date', '')):
