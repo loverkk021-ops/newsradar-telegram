@@ -23,6 +23,16 @@
   {
     "name": "吉祥物与官方IP",
     "url": "https://news.google.com/rss/search?q=%E5%90%89%E7%A5%A5%E7%89%A9+OR+%E5%AE%98%E6%96%B9IP&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+        "enabled": true
+  },
+  {
+    "name": "微博热搜榜",
+    "url": "https://rsshub.app/weibo/search/hot",
+    "enabled": true
+  },
+  {
+    "name": "微博吉祥物博文",
+    "url": "https://rsshub.app/weibo/keyword/%E5%90%89%E7%A5%A5%E7%89%A9",
     "enabled": true
   }
 ]
