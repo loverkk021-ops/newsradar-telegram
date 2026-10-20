@@ -1,6 +1,28 @@
+
 [
-  {"name":"央视新闻相关新闻（Google News 搜索聚合）","url":"https://news.google.com/rss/search?q=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","enabled":true},
-  {"name":"新华社相关新闻（Google News 搜索聚合）","url":"https://news.google.com/rss/search?q=%E6%96%B0%E5%8D%8E%E7%A4%BE&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","enabled":true},
-  {"name":"人民日报相关新闻（Google News 搜索聚合）","url":"https://news.google.com/rss/search?q=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","enabled":true},
-  {"name":"吉祥物与官方IP（Google News 搜索聚合）","url":"https://news.google.com/rss/search?q=%E5%90%89%E7%A5%A5%E7%89%A9%20OR%20%E6%96%87%E6%97%85IP%20OR%20%E5%AE%98%E6%96%B9IP&hl=zh-CN&gl=CN&ceid=CN:zh-Hans","enabled":true}
+  {
+    "name": "央视新闻",
+    "url": "https://news.google.com/rss/search?q=site%3Acctv.com+OR+site%3Acctv.cn&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    "enabled": true
+  },
+  {
+    "name": "人民日报",
+    "url": "https://news.google.com/rss/search?q=site%3Apeople.com.cn&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    "enabled": true
+  },
+  {
+    "name": "中国新闻网",
+    "url": "https://news.google.com/rss/search?q=site%3Achinanews.com.cn&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    "enabled": true
+  },
+  {
+    "name": "新华社",
+    "url": "https://news.google.com/rss/search?q=site%3Anews.cn+OR+site%3Axinhuanet.com&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    "enabled": true
+  },
+  {
+    "name": "吉祥物与官方IP",
+    "url": "https://news.google.com/rss/search?q=%E5%90%89%E7%A5%A5%E7%89%A9+OR+%E5%AE%98%E6%96%B9IP&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+    "enabled": true
+  }
 ]
