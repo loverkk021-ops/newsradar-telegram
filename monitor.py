@@ -66,7 +66,7 @@ def main():
         if fetched==0: raise SystemExit('No sources fetched; cannot initialize state: '+ '; '.join(failures))
         print('First run: establish baseline, do not send historical news')
     else:
-        for _,source,title,url,category in fresh[:15]:
+        for _,source,title,url,category in fresh:
             msg=f'📰 NewsRadar | {category}\n来源：{source}\n{title[:250]}\n{url}'
             try:
                 send(msg)
