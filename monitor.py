@@ -34,7 +34,7 @@ def items(xml):
 def send(message):
     payload=urllib.parse.urlencode({'chat_id':CHAT,'text':message,'disable_web_page_preview':'true'}).encode()
     url='https://api.telegram.org/bot'+TOKEN+'/sendMessage'
-    req=urllib.request.Request(url,data=payload,headers={'User-Agent':'NewsRadar/1.0'},timeout=20)
+  req=urllib.request.Request(url,data=payload,headers={'User-Agent':'NewsRadar/1.0'})
     with urllib.request.urlopen(req) as resp:
         result=json.load(resp)
     if not result.get('ok'): raise RuntimeError('Telegram rejected message')
