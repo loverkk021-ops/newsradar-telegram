@@ -76,7 +76,7 @@ def main():
                 key=hashlib.sha256((source['name']+'|'+url).encode()).hexdigest()
                 if key in seen: continue
                 seen.add(key)
-            title_key = hashlib.sha256(
+                title_key = hashlib.sha256(
                     re.sub(r'\W+', '', title.lower()).encode('utf-8')
                 ).hexdigest()
                 if title_key in seen_titles:
