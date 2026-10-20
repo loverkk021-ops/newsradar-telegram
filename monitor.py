@@ -23,7 +23,7 @@ def is_today(date_str):
     except (TypeError, ValueError, OverflowError):
         return False
 def request(url, data=None):
-    req = urllib.request.Request(url, data=data, headers={'User-Agent': UA, 'Accept': 'application/rss+xml, application/xml, text/xml, */*'})
+    req = urllib.request.Request(url, data=data, headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'application/rss+xml, application/xml, text/xml, */*'})
     with urllib.request.urlopen(req, timeout=20) as resp:
         return resp.read()
 
