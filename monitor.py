@@ -39,9 +39,11 @@ def send(message):
         result=json.load(resp)
     if not result.get('ok'): raise RuntimeError('Telegram rejected message')
 
-def main():if os.environ.get('TEST_TELEGRAM') == '1':
+def main():
+    if os.environ.get('TEST_TELEGRAM') == '1':
         send('✅ NewsRadar 测试成功！Telegram 新闻推送通道正常。')
         print('Telegram test message sent successfully')
+        return
         return
     if not TOKEN or not CHAT: raise SystemExit('Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Actions secrets')
     sources=json.loads(SOURCES.read_text(encoding='utf-8'))
