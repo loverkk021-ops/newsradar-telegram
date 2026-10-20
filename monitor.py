@@ -71,8 +71,9 @@ def main():
                 title=re.sub(r'\s+', ' ',entry['title']).strip()
                 url=entry['url']
                 if not title or not url: continue
-                if not is_today(entry.get('date', '')):
-                    continue
+                if source['name'] != '微博热搜榜':
+                    if not is_today(entry.get('date', '')):
+                        continue
                 key=hashlib.sha256((source['name']+'|'+url).encode()).hexdigest()
                 if key in seen: continue
                 seen.add(key)
@@ -84,7 +85,7 @@ def main():
                 seen_titles.add(title_key)
                 mascot=any(word.lower() in title.lower() for word in MASCOT)
                 important=any(word.lower() in title.lower() for word in IMPORTANT)
-                if mascot or important or source['name'] in ('央视新闻', '人民日报', '中国新闻网', '新华社'):
+                if mascot or important or source['name'] in ('央视新闻', '人民日报', '中国新闻网', '新华社', '微博热搜榜', '微博吉祥物博文'):
                    fresh.append((key,source['name'],title,url,'吉祥物/IP' if '吉祥物' in source['name'] else '新闻快讯'))
         except Exception as e:
             failures.append(source['name']+': '+str(e)[:150])
