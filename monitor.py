@@ -11,8 +11,8 @@ IMPORTANT = ['突发','重大','官宣','发布会','国务院','政策','地震
 MASCOT = ['吉祥物','形象大使','卡通形象','文旅IP','文旅 IP','城市IP','城市 IP','官方IP','官方 IP','动漫IP','动漫 IP','潮玩','玩偶','公仔','萌宠','新形象','IP形象','IP 形象']
 
 def request(url, data=None):
-    req = urllib.request.Request(url, data=data, headers=HEADERS, timeout=20)
-    with urllib.request.urlopen(req) as resp:
+    req = urllib.request.Request(url, data=data, headers=HEADERS, )
+    with urllib.request.urlopen(req, timeout=20) as resp:
         return resp.read()
 
 def text(node, name):
